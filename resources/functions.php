@@ -238,6 +238,37 @@ function login_user(){
 	}
 }
 
+
+function send_message()
+{
+	if(isset($_POST['submit']))
+	{
+		$to = "amirqadir@live.com";
+		$from_name    = $_POST['name'];
+		$subject = $_POST['subject'];
+		$email   = $_POST['email'];
+		$message = $_POST['message'];
+
+		$headers = "From: {$from_name} {$email}";
+
+		$result = mail($to, $subject, $message, $headers); // not reliable
+
+		if(!$result)
+		{
+			set_message("Sorry! we could not send your message");
+			redirect("contact.php");
+		}
+		else
+		{
+			set_message("Your message has been sent");
+			redirect("contact.php");
+		}
+
+
+
+	}
+}
+
 /******************** BACK END FUNCTIONS */
 
 
