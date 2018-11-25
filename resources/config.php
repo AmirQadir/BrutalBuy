@@ -2,6 +2,7 @@
 ob_start(); // output buffer (send a request to PHP)
 
 session_start();
+// session_destroy();
  
 
 defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);

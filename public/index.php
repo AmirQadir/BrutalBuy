@@ -23,7 +23,7 @@
 
                 <div class="row">
                     <!-- Single Thumbnail starting -->
-
+                    
                     <?php get_products(); ?>
                     <!-- review can be added to thumbnail
                            <div class="ratings">

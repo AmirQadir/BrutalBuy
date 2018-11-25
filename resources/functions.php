@@ -1,11 +1,11 @@
 <?php
 
-echo "from functions";
 
-if($connection)
-{
-	echo "connected established";
-}
+
+// if($connection)
+// {
+// 	echo "connected established";
+// }
 // helper functions
 
 function set_message($msg)
@@ -25,7 +25,7 @@ function display_message()
 {
 	if(isset($_SESSION['message'])){
 		echo $_SESSION['message'];
-		unset($_SESSION['message']);	
+		unset($_SESSION['message']);
 	} // check if session is available
 }
 
@@ -90,7 +90,7 @@ while($row = fetch_array($query))
                                 <h4><a href="item.php?id={$row['product_id']}">{$row['product_title']}</a>
                                 </h4>
                                 <p>wait for more <a target="_blank" href="http://www.google.com">DB project xD</a>.</p>
-                                <a class="btn btn-primary" target="_blank" href="item.php?id={$row['product_id']}">Add to Cart</a>
+                                <a class="btn btn-primary" target="_blank" href="cart.php?add={$row['product_id']}">Add to Cart</a>
                           </div>
                         </div>
                     </div>
